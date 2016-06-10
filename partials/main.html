@@ -1,0 +1,7 @@
+<div ng-repeat="toy in figurines">
+	<div>
+		{{ toy.Name }} 
+		<button 
+			ng-click="deleteToy(toy.InventoryId)">Delete</button>
+	</div>
+</div>
