@@ -12,7 +12,7 @@ MusicHistory.controller('TrackDetailsController', [
 
         $http
             .get('http://localhost:5000/api/Tracks/2')
-            .success(inv => $scope.track = inv);
+            .success(inv => $scope.track = inv[0]);
         }
 
 ]);
