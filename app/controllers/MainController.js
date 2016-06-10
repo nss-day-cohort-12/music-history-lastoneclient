@@ -3,23 +3,25 @@
 MusicHistory.controller('MainController', [
 	'$http', 
 	'$scope',
+	'AuthFactory',
 
-	function ($http, $scope) {
+	function ($http, $scope, AuthFactory) {
 
-		$scope.figurines = [];
+		$scope.tracks = [];
+		$scope.user = AuthFactory.getUser();
 
 		$http
-			.get('http://localhost:5000/api/Inventory')
-			.success(inv => $scope.figurines = inv);
+			.get('http://localhost:5000/api/Tracks')
+			.success(inv => $scope.tracks = inv);
 
-		$scope.deleteToy = function (id) {
+		$scope.deleteTrack = function (id) {
 			$http({
 				method: "DELETE",
-				url: `http://localhost:5000/api/Inventory/${id}`
+				url: `http://localhost:5000/api/Tracks/${id}`
 			})
 			.then(
-				() => console.log("Toy deleted"),
-				() => console.log("Toy not deleted")
+				() => console.log("Track deleted"),
+				() => console.log("Track not deleted")
 			);
 		}
 	}

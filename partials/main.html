@@ -1,7 +1,7 @@
-<div ng-repeat="toy in figurines">
+<div ng-repeat="track in tracks">
 	<div>
-		{{ toy.Name }} 
+		{{ track.TrackTitle }} 
 		<button 
-			ng-click="deleteToy(toy.InventoryId)">Delete</button>
+			ng-click="deleteTrack(track.TrackId)">Delete</button>
 	</div>
 </div>
