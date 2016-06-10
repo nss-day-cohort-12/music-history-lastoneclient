@@ -18,6 +18,9 @@ MusicHistory.config(['$routeProvider',
 		.when('/register', {
 			templateUrl: 'partials/register.html',
 			controller: 'RegisterController'
+		}).when('/trackdetails/:id', {
+			templateUrl: 'partials/trackdetails.html',
+			controller: 'TrackDetailsController'
 		})
 		.otherwise('/');
   }

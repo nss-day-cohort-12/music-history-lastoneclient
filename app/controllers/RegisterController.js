@@ -43,7 +43,7 @@ MusicHistory.controller('RegisterController', [
 				    				response => {
 				    					let theUser = response.data[0];
 				    					console.log("Found the User", theUser);
-				    					authFactory.setUser(theUser)
+				    					authFactory.setUser(theUser);
 				    					$location.path("/");
 				    				},
 				    				response => console.log("Could not find that User", response)

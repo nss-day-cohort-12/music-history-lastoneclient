@@ -1,6 +1,9 @@
 <div ng-repeat="track in tracks">
 	<div>
-		{{ track.TrackTitle }} 
+        <h3>Track Title: </h3>
+        <div><a href="/#/trackdetails/2">{{ track.TrackTitle }}</a></div> 
+		<h3>Artist: </h3>
+        <div>{{ track.Artist }}</div> 
 		<button 
 			ng-click="deleteTrack(track.TrackId)">Delete</button>
 	</div>
