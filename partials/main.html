@@ -1,7 +1,7 @@
 <div ng-repeat="track in tracks">
 	<div>
         <h3>Track Title: </h3>
-        <div><a href="/#/trackdetails/2">{{ track.TrackTitle }}</a></div> 
+        <div><a href="/#/trackdetails/{{track.TrackId}}">{{ track.TrackTitle }}</a></div> 
 		<h3>Artist: </h3>
         <div>{{ track.Artist }}</div> 
 		<button 
