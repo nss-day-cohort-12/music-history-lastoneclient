@@ -10,6 +10,9 @@ MusicHistory.controller('MainController', [
 		$scope.tracks = [];
 		$scope.user = AuthFactory.getUser();
 
+		$scope.filterField = '';
+		$scope.filterText = '';
+
 		$http
 			.get('http://localhost:5000/api/Tracks')
 			.success(inv => $scope.tracks = inv);

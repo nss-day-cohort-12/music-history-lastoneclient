@@ -1,0 +1,16 @@
+h3 {
+    display: inline;
+}
+
+li#registerlink {
+    list-style: none;
+    float: right;
+}
+
+.filter {
+    margin-bottom: 2em;
+}
+
+.output {
+    display: inline;
+}

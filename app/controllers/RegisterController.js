@@ -9,6 +9,7 @@ MusicHistory.controller('RegisterController', [
 	function ($http, $scope, authFactory, $location) {
 
 		$scope.githubOauth = function () {
+			console.log("Github OAuth started.");
 			OAuth.initialize('pNuuqfq7FGghJRlx3D3HnEMEFo4')
 			
 			OAuth.popup('github').done(function(result) {

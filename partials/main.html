@@ -1,10 +1,29 @@
-<div ng-repeat="track in tracks">
+<nav>
+    <li id="registerlink"><a href="#/register">Sign In</a></li>
+</nav>   
+
+<div class="filter">
+    <h3>Filter By: </h3>
+    <select ng-model="filterField">
+        <option value="AlbumTitle">Album Title</option>
+        <option value="YearReleased">Year Released</option>
+        <option value="Author">Author</option>
+        <option value="Genre">Genre</option>
+        <option value="TrackTitle">Track Title</option>
+    </select>
+    <input type="text" name="trackSearch" ng-model="filterText">
+</div>
+
+<div ng-repeat="track in tracks | filter:filterText">
 	<div>
         <h3>Track Title: </h3>
-        <div><a href="/#/trackdetails/{{track.TrackId}}">{{ track.TrackTitle }}</a></div> 
+        <div class="output"><a href="/#/trackdetails/{{track.TrackId}}">{{ track.TrackTitle }}</a></div> 
+        <br>
 		<h3>Artist: </h3>
-        <div>{{ track.Artist }}</div> 
-		<button 
-			ng-click="deleteTrack(track.TrackId)">Delete</button>
+        <div class="output">{{ track.Artist }}</div> 
+        <br>
+		<button ng-click="deleteTrack(track.TrackId)">Delete</button>
+
+        <hr>
 	</div>
 </div>
